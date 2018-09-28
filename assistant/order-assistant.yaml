@@ -1,1 +1,40 @@
 version: 4
+concepts:
+  - name: ':Attribute'
+  - name: ':NumAttribute'
+  - name: ':Price'
+    ontology:
+      subClassOf:
+        - ':Attribute'
+        - ':NumAttribute'
+  - name: ':Order'
+    spelling: order
+    ontology:
+      subClassOf: ':Showable'
+    attributes:
+      ':Price': price
+  - name: ':Showable'
+  - name: ':Orders'
+    spelling: orders|*
+    ontology:
+      isListOf: ':Order'
+      subClassOf: ':Showable'
+patterns:
+  - text: 'show me all {orders|:Orders} where {price|:Price} is below 30'
+actions:
+  - name: getOrders
+    signature: ':Orders -> data :Orders'
+    kind: 'nodejs:8'
+    code: |-
+      const {Result} = require('eba');
+
+      module.exports.main = (params) => {
+        const orders = [
+          {id: 0, supplier: 'Kirkland', price: 10, date: new Date() },
+          {id: 1, supplier: 'Kirkland', price: 20, date: new Date() },
+          {id: 2, supplier: 'Kirkland', price: 30, date: new Date() },
+          {id: 3, supplier: 'Kirkland', price: 40, date: new Date() },
+        ]
+        return new Result().setData(':Orders', orders);
+      }
+    notes: ''
