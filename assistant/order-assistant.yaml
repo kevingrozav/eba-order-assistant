@@ -7,24 +7,13 @@ concepts:
       subClassOf:
         - ':Attribute'
         - ':NumAttribute'
-  - name: ':Order'
-    spelling: order
-    ontology:
-      subClassOf: ':Showable'
-    attributes:
-      ':Price': price
   - name: ':Showable'
-  - name: ':Orders'
-    spelling: orders|*
-    ontology:
-      isListOf: ':Order'
-      subClassOf: ':Showable'
 patterns:
   - text: changes for github
-  - text: 'show me all {orders|:Orders} where {price|:Price} is below 30'
+  - text: 'show me all orders where {price|:Price} is below 30'
 actions:
   - name: getOrders
-    signature: ':Orders -> data :Orders'
+    signature: '? -> data ?'
     kind: 'nodejs:8'
     code: |-
       const {Result} = require('eba');
