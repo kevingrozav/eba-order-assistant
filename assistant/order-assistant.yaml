@@ -20,6 +20,7 @@ concepts:
       isListOf: ':Order'
       subClassOf: ':Showable'
 patterns:
+  - text: changes for github
   - text: 'show me all {orders|:Orders} where {price|:Price} is below 30'
 actions:
   - name: getOrders
