@@ -1,6 +1,15 @@
 version: 4
-patterns:
-  - text: show me all orders where price is below 30
+concepts:
+  - name: ':Order'
+    spelling: order
+    ontology:
+      subClassOf: ':Showable'
+  - name: ':Showable'
+  - name: ':Orders'
+    spelling: orders|*
+    ontology:
+      isListOf: ':Order'
+      subClassOf: ':Showable'
 actions:
   - name: getOrders
     signature: '? -> data ?'
