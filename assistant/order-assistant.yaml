@@ -9,7 +9,6 @@ concepts:
         - ':NumAttribute'
   - name: ':Showable'
 patterns:
-  - text: changes for github
   - text: 'show me all orders where {price|:Price} is below 30'
 actions:
   - name: getOrders
