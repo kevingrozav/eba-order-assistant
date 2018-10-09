@@ -1,3 +1,13 @@
 version: 4
 concepts:
   - name: ':Something'
+actions:
+  - name: ':Something'
+    signature: ':Something -> data :Something'
+    kind: 'nodejs:8'
+    code: |-
+      const {Result} = require('eba')
+      module.exports.main = (params) => {
+        return new Result().setData(':Something', 'something special')
+      }
+    notes: ''
