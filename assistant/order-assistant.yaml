@@ -1,4 +1,9 @@
 version: 4
 concepts:
+  - name: ':Showable'
+  - name: ':Order'
+    ontology:
+      subClassOf: ':Showable'
+  - name: ':Orders'
   - name: ':Z'
   - name: ':Y'
