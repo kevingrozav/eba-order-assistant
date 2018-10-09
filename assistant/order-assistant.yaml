@@ -1,1 +1,7 @@
 version: 4
+concepts:
+  - name: ':Showable'
+  - name: ':Y'
+    ontology:
+      subClassOf: ':Showable'
+  - name: ':X'
