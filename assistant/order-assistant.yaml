@@ -1,4 +1,5 @@
 version: 4
 concepts:
-  - name: ':Showable'
+  - name: ':Z'
+  - name: ':Y'
   - name: ':X'
