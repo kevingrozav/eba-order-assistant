@@ -1,20 +1,3 @@
 version: 4
 patterns:
   - text: show me all orders where price is below 30
-actions:
-  - name: getOrders
-    signature: '? -> data ?'
-    kind: 'nodejs:8'
-    code: |-
-      const {Result} = require('eba');
-
-      module.exports.main = (params) => {
-        const orders = [
-          {id: 0, supplier: 'Kirkland', price: 10, date: new Date() },
-          {id: 1, supplier: 'Kirkland', price: 20, date: new Date() },
-          {id: 2, supplier: 'Kirkland', price: 30, date: new Date() },
-          {id: 3, supplier: 'Kirkland', price: 40, date: new Date() },
-        ]
-        return new Result().setData(':Orders', orders);
-      }
-    notes: ''
