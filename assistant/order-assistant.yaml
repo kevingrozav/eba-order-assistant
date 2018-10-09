@@ -1,1 +1,18 @@
 version: 4
+concepts:
+  - name: ':Showable'
+  - name: ':Something'
+    spelling: something
+    ontology:
+      subClassOf: ':Showable'
+actions:
+  - name: doSomething
+    signature: ':Something -> data :Something'
+    kind: 'nodejs:8'
+    code: |-
+      const {Result} = require('eba')
+
+      module.exports.main = (params) => {
+        return new Result().setData(':Something', 'Something special')
+      }
+    notes: ''
