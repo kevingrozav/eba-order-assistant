@@ -1,3 +1,1 @@
 version: 4
-patterns:
-  - text: show me all orders where price is below 30
