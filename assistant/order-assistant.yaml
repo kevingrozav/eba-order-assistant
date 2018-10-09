@@ -6,7 +6,6 @@ concepts:
     ontology:
       subClassOf:
         - ':Attribute'
-        - ':NumAttribute'
   - name: ':Showable'
 patterns:
   - text: 'show me all orders where {price|:Price} is below 30'
