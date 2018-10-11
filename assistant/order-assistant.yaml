@@ -1,7 +1,6 @@
 version: 4
 concepts:
   - name: ':X'
-  - name: ':Z'
 actions:
   - name: doSomething
     signature: ':X -> data :X'
