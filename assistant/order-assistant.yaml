@@ -7,4 +7,3 @@ concepts:
   - name: ':Y'
     ontology:
       subClassOf: ':Showable'
-  - name: ':X'
