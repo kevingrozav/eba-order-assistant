@@ -8,3 +8,9 @@ concepts:
     ontology:
       subClassOf: ':Showable'
   - name: ':X'
+actions:
+  - name: doSomething
+    signature: ':X -> data :X'
+    kind: 'nodejs:8'
+    code: console.log('hi')
+    notes: ''
